@@ -4,7 +4,7 @@
 @use 'components';
 
 
-.icon-web { background-image: url("src/assets/images/computer.png"); }
-.icon-video { background-image: url("src/assets/images/camera.png"); }
-.icon-print { background-image: url("src/assets/images/printer.png"); }
-.icon-ill { background-image: url("src/assets/images/heart.png"); }
+.icon-web { background-image: url("/src/assets/images/computer.png"); }
+.icon-video { background-image: url("/src/assets/images/camera.png"); }
+.icon-print { background-image: url("/src/assets/images/printer.png"); }
+.icon-ill { background-image: url("/src/assets/images/heart.png"); }

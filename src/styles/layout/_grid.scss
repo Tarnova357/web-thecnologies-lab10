@@ -18,8 +18,12 @@
   }
 
   &-title {
-    font-size: 14px; text-transform: uppercase; letter-spacing: 2px;
-    margin-bottom: 0; position: relative; display: block;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 0;
+    position: relative;
+    display: block;
 
     &::after { content: '--'; margin-left: 10px; color: $color-accent; }
   }

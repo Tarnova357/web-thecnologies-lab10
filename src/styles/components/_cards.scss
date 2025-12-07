@@ -105,6 +105,16 @@
   }
 }
 
+.cta-section{
+  padding: 50px 0;
+  text-align: center;
+  background: #fff;
+
+  & .section-title{
+    margin-bottom: 20px;
+  }
+}
+
 .services-grid {
   display: flex;
   justify-content: space-between;
@@ -169,7 +179,6 @@
   gap: 20px;
   align-items: stretch;
 
-  // Mobile styles
   flex-direction: column;
   text-align: center;
   margin-bottom: 40px;

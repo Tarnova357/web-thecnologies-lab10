@@ -15,10 +15,10 @@
   width: 24px; height: 24px; border-radius: 50%;
   background-color: #fff; background-size: 105%;
   &:hover { transform: scale(1.2); }
+  &:active { transform: scale(0.9); }
 }
 
-// Іконки
-.icon-rss { background-image: url("src/assets/images/rss-icon.png"); }
-.icon-fb { background-image: url("src/assets/images/facebook-img.png"); }
-.icon-tw { background-image: url("src/assets/images/twitter.png"); }
-.icon-drib { background-image: url("src/assets/images/dribble.png"); }
+.icon-rss { background-image: url("/src/assets/images/rss-icon.png"); }
+.icon-fb { background-image: url("/src/assets/images/facebook-img.png"); }
+.icon-tw { background-image: url("/src/assets/images/twitter.png"); }
+.icon-drib { background-image: url("/src/assets/images/dribble.png"); }
