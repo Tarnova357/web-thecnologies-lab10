@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "devDependencies": {
+    "@parcel/transformer-pug": "^2.16.3",
     "vite": "^7.1.7",
     "vituum": "^1.2.0"
   },

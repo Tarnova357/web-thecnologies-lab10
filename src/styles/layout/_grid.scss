@@ -1,4 +1,33 @@
+@use '../utils/variables' as *;
+
 .container {
-  width: min(1200px, 90%);
-  margin-inline: auto;
+  width: 100%;
+  max-width: $container-width;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.section {
+  padding: $spacing-section 0;
+
+  &-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 10px;
+  }
+
+  &-title {
+    font-size: 14px; text-transform: uppercase; letter-spacing: 2px;
+    margin-bottom: 0; position: relative; display: block;
+
+    &::after { content: '--'; margin-left: 10px; color: $color-accent; }
+  }
+  &.center .section-title::after { display: none; }
+
+  &-desc {
+    font-size: 14px; color: $color-text-light;
+    margin-bottom: 40px; max-width: 700px;
+    &.center { margin: 0 auto 40px; text-align: center; }
+  }
 }

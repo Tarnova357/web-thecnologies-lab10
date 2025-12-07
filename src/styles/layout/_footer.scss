@@ -9,18 +9,16 @@
   display: flex; justify-content: space-between; align-items: center;
 }
 
-.social-icons {
-  display: flex; gap: 10px;
-}
+.social-icons { display: flex; gap: 10px; }
 
 .social-link {
   width: 24px; height: 24px; border-radius: 50%;
-  background-color: #ffffff; background-size: 105%;
+  background-color: #fff; background-size: 105%;
   &:hover { transform: scale(1.2); }
 }
 
-// Іконки (переконайтеся, що файли є в assets)
-.icon-rss { background-image: url("/assets/images/rss-icon.png"); }
-.icon-fb { background-image: url("/assets/images/facebook-img.png"); }
-.icon-tw { background-image: url("/assets/images/twitter.png"); }
-.icon-drib { background-image: url("/assets/images/dribble.png"); }
+// Іконки
+.icon-rss { background-image: url("src/assets/images/rss-icon.png"); }
+.icon-fb { background-image: url("src/assets/images/facebook-img.png"); }
+.icon-tw { background-image: url("src/assets/images/twitter.png"); }
+.icon-drib { background-image: url("src/assets/images/dribble.png"); }

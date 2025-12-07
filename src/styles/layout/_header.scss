@@ -1,18 +1,36 @@
 @use '../utils/variables' as *;
 
 .main-header {
-  position: fixed; top: 0; left: 0; width: 100%;
-  height: $header-height; z-index: 1000;
-  background: #fff; padding: 20px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: $header-height;
+  z-index: 1000;
+  background: #fff;
+  padding: 20px 0;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
 }
 
 .header-inner {
-  display: flex; justify-content: space-between; align-items: center; height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
 }
 
 .logo {
-  display: block; width: 100px; height: 30px;
-  background-image: url("/assets/images/logo.png");
-  background-size: contain; background-repeat: no-repeat;
+  z-index: 1001;
+  display: block;
+  width: 100px;
+  height: 30px;
+
+  background-image: url("src/assets/images/logo.png");
+
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: contain;
+
+  margin: 0;
+  padding: 0;
 }

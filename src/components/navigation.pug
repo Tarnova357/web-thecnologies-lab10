@@ -1,5 +1,20 @@
-nav(class="navigation")
-    ul
-        each link in navLinks
+nav.main-nav
+
+    .desktop-nav
+        ul.nav-list
+            each link in navLinks
+                li: a.nav-link(href="#")= link
             li
-                a(href=link.href)= link.text
+                a.nav-link-icon.icon-menu-heart(href="#", aria-label="Favorites")
+
+
+    input#burger-toggle.burger-checkbox(type="checkbox")
+    label.burger-menu(for="burger-toggle")
+        span.burger-line
+
+
+    .mobile-menu-overlay
+        .mobile-menu-content
+            ul.mobile-list
+                each link in navLinks
+                    li: a.mobile-link(href="#")= link

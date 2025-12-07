@@ -1,16 +1,27 @@
-*, html, body {
-  font-family: "Montserrat", sans-serif;
+@use '../utils/variables' as *;
+
+body {
+  font-family: $font-primary;
+  background-color: $color-bg-body;
+  color: $color-text-main;
+  line-height: 1.6;
+  font-size: 14px;
+  padding-top: $header-height;
 }
 
-html {
-  scroll-behavior: smooth;
+h1, h2, h3 {
+  font-family: $font-secondary;
+  color: $color-text-heading;
+  font-weight: 700;
+  margin-bottom: 1em;
 }
 
-a {
-  cursor: pointer;
-  text-decoration: none;
-}
+.center { text-align: center; }
 
-a:hover {
-  text-decoration: underline;
+.icon {
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  background-color: transparent;
 }

@@ -1,13 +1,20 @@
-.button {
-  background: var(--color-primary);
-  color: white;
+@use '../utils/variables' as *;
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 2px;
+  text-align: center;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
   border: none;
-  border-radius: 4px;
-  padding: 0.75rem 1.5rem;
   cursor: pointer;
-  transition: background 0.2s;
 
-  &:hover {
-
+  &-primary {
+    background-color: $color-accent; color: #fff;
+    &:hover { background-color: $color-accent-hover; }
   }
+  &-large { padding: 15px 35px; font-size: 13px; }
 }

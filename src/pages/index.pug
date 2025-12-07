@@ -1,19 +1,46 @@
-extends ../layouts/main
+extends ../layouts/main.pug
+include ../data/data.pug
+include ../components/mixin.pug
 
-block fonts
-    include ../includes/fonts
-
-append meta
-    include ../includes/meta
-
-block data
-    include ../data/data
-
-block header
-    include ../components/header
 
 block content
-    include ../components/content
 
-block footer
-    include ../components/footer
+    section.hero
+        .container
+            h1.hero-title We're Keepsake, a digital & branding agency.
+            p.hero-subtitle Specializing in web design, print, motion video, based in London. We love to turn ideas into beautiful things.
+
+
+    section.section.portfolio
+        .container
+            .section-header
+                h2.section-title Our Awesome Works
+                a.btn.btn-primary(href="#") Filter Portfolio
+
+            .portfolio-grid
+                each work in portfolioWorks
+                    +portfolioItem(work.img, work.title, work.handle)
+
+    section.cta-section
+        .container
+            h2.section-title.center Would you love to work with us?
+            button.btn.btn-primary.btn-large Contact Us
+
+
+    section.section.services
+        .container
+            h2.section-title What we do
+            p.section-desc.center Maecenas sed diam eget risus varius blandit sit amet non magna. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
+
+            .services-grid
+                each srv in services
+                    +serviceItem(srv.icon, srv.title, srv.desc)
+
+    section.section.journal
+        .container
+            h2.section-title From the Journal
+            p.section-desc Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec ullamcorper nulla non metus auctor fringilla.
+
+            .journal-grid
+                each item in journal
+                    +journalItem(item.img, item.meta, item.title, item.text)

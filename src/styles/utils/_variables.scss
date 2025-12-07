@@ -1,40 +1,27 @@
-$color-primary-darker: #2d2d2d;
-$color-primary-dark: #7c7575;
-$color-primary: #999;
-$color-primary-light: #e6e6e6;
-$color-primary-lighter: #fafafa;
 
-$text-color: #333;
-$font-main: 'Inter', system-ui, sans-serif;
+$color-bg-body: #ffffff;
+$color-bg-hero: #f4f6f8;
+$color-bg-footer: #222222;
 
-$grid-breakpoints: (
-        xs: 0,
-        sm: 544px,
-        md: 768px,
-        lg: 992px,
-        xl: 1200px,
-        xxl: 1600px
+$color-text-main: #444444;
+$color-text-light: #777777;
+$color-text-secondary: #cccccc;
+$color-text-heading: #2c2c2c;
+
+$color-accent: #ff6b6b;
+$color-accent-hover: #e05555;
+$color-border: #eeeeee;
+$color-overlay: rgba(0, 0, 0, 0.8);
+
+$font-primary: 'Roboto', sans-serif;
+$font-secondary: 'Playfair Display', serif;
+
+$container-width: 1140px;
+$header-height: 80px;
+$spacing-section: 60px;
+
+$breakpoints: (
+        'sm': 576px,
+        'md': 768px,
+        'lg': 992px
 );
-
-$grid-columns: 12;
-$grid-fluid: false;
-$grid-gutter-widths: (
-        down sm: 40px,
-        up md: 30px,
-);
-
-$container-max-widths: (
-        sm: 540px,
-        md: 720px,
-        lg: 960px,
-        xl: 1140px
-);
-
-$border-radius: 5px;
-
-:root {
-  --font-main: #{$font-main};
-  --color-primary: #{$color-primary};
-  --color-secondary: #{$color-primary-light};
-  --text-color: #{$text-color};
-}
