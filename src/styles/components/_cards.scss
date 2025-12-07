@@ -1,0 +1,244 @@
+@use '../utils/variables' as *;
+@use '../utils/mixins' as *;
+
+
+.portfolio-grid {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.portfolio-item {
+  position: relative;
+  background: #fff;
+  cursor: pointer;
+  overflow: hidden;
+
+  width: 100%;
+  margin-bottom: 10px;
+
+  @include mq('sm') {
+    width: calc(50% - 10px);
+  }
+
+  @include mq('md') {
+    width: calc(33.3333% - 10px);
+    margin-bottom: 0;
+  }
+
+  .portfolio-link img {
+    width: 100%;
+    aspect-ratio: 4/3;
+    display: block;
+  }
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $color-overlay;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+  }
+
+  .info {
+    text-align: center;
+    color: white;
+  }
+
+  .name {
+    color: $color-text-light;
+    font-size: 1.2rem;
+    margin: 0;
+    font-weight: 400;
+  }
+
+  .handle {
+    color: #1abc9c;
+    font-size: 0.9rem;
+    margin-top: 5px;
+  }
+
+  .avatar-wrapper {
+    position: relative;
+    margin-bottom: 15px;
+  }
+
+  .avatar {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid rgba(255, 255, 255, 0.5);
+    display: block;
+
+    img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+    }
+  }
+
+  .plus-icon {
+    position: absolute;
+    bottom: 35%;
+    right: -12px;
+    width: 30px;
+    height: 30px;
+    background-color: #1abc9c;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+  }
+
+  &:hover .overlay {
+    opacity: 1;
+  }
+}
+
+.services-grid {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+  text-align: center;
+}
+
+.service-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 20px 10px;
+
+  @include mq('sm') {
+    width: calc(50% - 30px);
+  }
+
+  @include mq('md') {
+    width: calc(25% - 30px);
+  }
+
+  .icon {
+    display: block;
+    width: 80px;
+    height: 80px;
+    background-color: #ebebeb;
+    border-radius: 50%;
+    background-size: 40px;
+    margin-bottom: 20px;
+    color: #999;
+
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .service-title {
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 15px;
+    font-family: $font-primary;
+  }
+
+  .service-desc {
+    font-size: 12px;
+    color: $color-text-light;
+  }
+}
+
+.journal-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.journal-item {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  gap: 20px;
+  align-items: stretch;
+
+  // Mobile styles
+  flex-direction: column;
+  text-align: center;
+  margin-bottom: 40px;
+
+  @include mq('md') {
+    width: calc(50% - 30px);
+    flex-direction: row;
+    text-align: left;
+    margin-bottom: 0;
+  }
+
+  .journal-img {
+    width: 100%;
+    margin-bottom: 20px;
+
+    @include mq('md') {
+      width: 150px;
+      flex: 0 0 auto;
+      margin-bottom: 0;
+    }
+
+    img {
+      width: 100%;
+      aspect-ratio: 1/1;
+    }
+  }
+
+  .journal-content {
+    flex: 1;
+    min-width: 0;
+    padding: 0;
+  }
+
+  .journal-meta {
+    font-size: 10px;
+    text-transform: uppercase;
+    color: $color-text-secondary;
+    display: block;
+    margin-bottom: 5px;
+  }
+
+  .journal-title {
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    font-family: $font-primary;
+
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    a:hover {
+      color: $color-accent;
+    }
+  }
+
+  .journal-excerpt {
+    font-size: 13px;
+    color: $color-text-light;
+
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}

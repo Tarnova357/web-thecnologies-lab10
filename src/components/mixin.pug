@@ -1,0 +1,28 @@
+mixin portfolioItem(imgSrc, title, handle)
+    article.portfolio-item
+        a.portfolio-link(href="#")
+            img(src=imgSrc, alt=title)
+            .overlay
+                .avatar-wrapper
+                    .avatar
+                        img(src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80", alt="Avatar")
+                    .plus-icon +
+                .info
+                    h3.name= title
+                    p.handle= handle
+
+mixin serviceItem(iconClass, title, desc)
+    article.service-item
+        .icon(class=iconClass)
+        h3.service-title= title
+        p.service-desc= desc
+
+mixin journalItem(imgSrc, meta, title, excerpt)
+    article.journal-item
+        .journal-img
+            img(src=imgSrc, alt=title)
+        .journal-content
+            span.journal-meta= meta
+            h3.journal-title
+                a(href="#")= title
+            p.journal-excerpt= excerpt

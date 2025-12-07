@@ -1,0 +1,14 @@
+@use '../utils/variables' as *;
+
+.hero {
+  background-color: $color-bg-hero;
+  text-align: center; padding: 80px 0;
+
+  &-title {
+    font-size: 32px; font-weight: 400; margin-bottom: 20px;
+    text-transform: uppercase; letter-spacing: 2px;
+  }
+  &-subtitle {
+    max-width: 600px; margin: 0 auto; color: $color-text-light; font-size: 13px;
+  }
+}
