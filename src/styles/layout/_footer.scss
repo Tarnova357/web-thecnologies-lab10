@@ -1,0 +1,26 @@
+@use '../utils/variables' as *;
+
+.main-footer {
+  background-color: $color-bg-footer;
+  color: #666; padding: 40px 0; font-size: 12px;
+}
+
+.footer-inner {
+  display: flex; justify-content: space-between; align-items: center;
+}
+
+.social-icons {
+  display: flex; gap: 10px;
+}
+
+.social-link {
+  width: 24px; height: 24px; border-radius: 50%;
+  background-color: #ffffff; background-size: 105%;
+  &:hover { transform: scale(1.2); }
+}
+
+// Іконки (переконайтеся, що файли є в assets)
+.icon-rss { background-image: url("/assets/images/rss-icon.png"); }
+.icon-fb { background-image: url("/assets/images/facebook-img.png"); }
+.icon-tw { background-image: url("/assets/images/twitter.png"); }
+.icon-drib { background-image: url("/assets/images/dribble.png"); }
